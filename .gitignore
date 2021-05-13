@@ -1,3 +1,4 @@
 .DS_Store
+.editorconfig
 *_Scripts/diff/*
 *_Scripts/extra/*
