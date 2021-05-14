@@ -1,0 +1,57 @@
+-------------- Script Inserted by Styles Helper --------------
+
+command applyStyles pTest
+   local tStylesFilePath, tStylesLibPath, tCurrentCdID
+   local tStylesLibFile = ""
+   
+   if pTest is TRUE then
+      return [[tVersionOfScriptToInject]]
+   end if
+   
+   put the uStylesheetPath of this stack into tStylesFilePath
+   
+   if the environment is "development" then
+      if tStylesFilePath is empty then
+         answer file "Select stylesheet:"
+         put it into tStylesFilePath
+         
+         set the uStylesheetPath of this stack to tStylesFilePath
+      end if
+   end if
+   
+   if "stylesLib" is not among the lines of stacksInUse then
+      if the uStylesLibPath of this stack <> empty then
+         put the uStylesLibPath of this stack into tStylesLibPath
+         			
+         if there is a file tStylesLibPath then
+            start using stack tStylesLibPath
+            put "inUse" into tStylesLibFile
+         else
+            answer warning "Please load the stylesLib library."
+         end if
+      end if
+      		 
+   else
+      put "inUse" into tStylesLibFile
+   end if
+   	
+   if (tStylesFilePath <> empty) and (tStylesLibFile is "inUse") then
+      syLoadStyles tStylesFilePath
+      
+      put the id of this cd into tCurrentCdID
+      lock screen
+			lock messages
+      
+      repeat with i = 1 to the number of lines of the cardIDs of this stack
+         go cd id (line i of the cardIDs of this stack)
+         syNewLook
+      end repeat
+      
+      go cd id tCurrentCdID
+			
+			unlock messages
+      unlock screen
+   end if
+end applyStyles
+
+-------------- End of Script Inserted by Styles Helper --------------
