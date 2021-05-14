@@ -144,7 +144,7 @@ The stylesheet system handles two nonstandard properties "padding" and "align". 
 
 ## Meta
 
-- Version: 0.9.0  
+- Version: 1.0.0  
 - Web Site: <https://revigniter.com/>  
 - Author:  [Ralf Bitter](mailto:rabit@revigniter.com)  
 
