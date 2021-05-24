@@ -1214,16 +1214,7 @@ public handler OnMouseMove() returns nothing
 				put true into tRedraw
 			end if
 
-			// rabit
-			if mHoverRow <= the number of elements in mDataList then
-			//
-
 			setHoverTooltip(tHoverIcon)
-
-			// rabit
-			end if
-			//
-
 		end if
 
 		if tRedraw then
@@ -1486,13 +1477,12 @@ private handler SetHoverTooltip(in pIconString as String) returns nothing
 		//
 
 		// rabit
+		variable tTooltip as String
 		// Do not show "add" tooltip on indented leafs
 		if mHoverRow <= the number of elements in mDataList then
 			variable tData as Array
 			put element mHoverRow of mDataList into tData
 
-
-			variable tTooltip as String
 	    if pIconString is "delete" then
 				if tData["indent"] > 0 then
 	        put "Delete property" into tTooltip
@@ -1507,15 +1497,12 @@ private handler SetHoverTooltip(in pIconString as String) returns nothing
 
 			if (tData["indent"] > 0) and (tTooltip is "Add new property") then
 				put "" into tTooltip
-			else
-		//
-
-    	set property "tooltip" of my script object to tTooltip
-
-		// rabit
 			end if
+		else
+				put mOldTooltip into tTooltip
 		end if
 		//
+		set property "tooltip" of my script object to tTooltip
 end handler
 
 private handler UpdateIconRects() returns nothing

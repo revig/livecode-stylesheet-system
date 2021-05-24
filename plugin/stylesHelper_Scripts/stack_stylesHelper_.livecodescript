@@ -19,7 +19,7 @@ Script "stack_stylesHelper_"
 --
 -- ©2021 revIgniter.com
 --
--- Version 1.0.0
+-- Version 1.0.2
 --
 -- License: Apache License, Version 2.0, see http://www.apache.org/licenses/LICENSE-2.0
 --
