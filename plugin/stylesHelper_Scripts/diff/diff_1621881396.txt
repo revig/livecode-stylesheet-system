@@ -1,0 +1,94 @@
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_.livecodescript
+stack "stylesHelper"
+
+@@ -19,7 +19,7 @@
+ --
+ -- ©2021 revIgniter.com
+ --
+--- Version 1.0.2
++-- Version 1.0.0
+ --
+ -- License: Apache License, Version 2.0, see http://www.apache.org/licenses/LICENSE-2.0
+ --
+
+
+card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_card_id_1002.livecodescript
+
+
+
+widget id 1048 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_widget_id_1048.livecodescript
+
+
+
+button id 1004 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_button_id_1004.livecodescript
+
+
+
+field id 1013 of group id 1011 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_field_id_1013.livecodescript
+
+
+
+button id 1019 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_button_id_1019.livecodescript
+
+
+
+button id 1020 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_button_id_1020.livecodescript
+
+
+
+button id 1021 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_button_id_1021.livecodescript
+
+
+
+button id 1022 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_button_id_1022.livecodescript
+
+
+
+group id 1027 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_group_id_1027.livecodescript
+
+
+
+widget id 1034 of group id 1027 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_widget_id_1034.livecodescript
+
+
+
+field id 1037 of group id 1035 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_field_id_1037.livecodescript
+
+
+
+button id 1042 of card id 1002 of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_stylesHelper_button_id_1042.livecodescript
+
+
+
+stack "instructionsStack" of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_instructionsStack_.livecodescript
+
+
+
+field id 1010 of bkgnd id 1014 of stack "instructionsStack" of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_instructionsStack_field_id_1010.livecodescript
+
+
+
+card id 1002 of stack "instructionsStack" of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_instructionsStack_card_id_1002.livecodescript
+
+
+
+widget id 1078 of card id 1002 of stack "instructionsStack" of stack "stylesHelper"
+/Users/rabit/Documents/gitMercurial/livecode-stylesheet-system/plugin/stylesHelper_Scripts/stack_instructionsStack_widget_id_1078.livecodescript
+
+
+

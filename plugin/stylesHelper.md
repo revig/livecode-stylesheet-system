@@ -8,9 +8,9 @@
 * [stack_stylesHelper_card_id_1002](./stylesHelper_Scripts/stack_stylesHelper_card_id_1002.livecodescript)
 
 **widget "stylesTrv" of card "styleSheetCd" of stack "stylesHelper"**
-* ID: widget id 1024 of card id 1002 of stack "stylesHelper"
+* ID: widget id 1049 of card id 1002 of stack "stylesHelper"
 * Widget Kind: commmunity.livecode.modbyrabit.widget.stylestreeview
-* [stack_stylesHelper_widget_id_1024](./stylesHelper_Scripts/stack_stylesHelper_widget_id_1024.livecodescript)
+* [stack_stylesHelper_widget_id_1049](./stylesHelper_Scripts/stack_stylesHelper_widget_id_1049.livecodescript)
 
 **widget "infoIcon" of card "styleSheetCd" of stack "stylesHelper"**
 * ID: widget id 1048 of card id 1002 of stack "stylesHelper"
