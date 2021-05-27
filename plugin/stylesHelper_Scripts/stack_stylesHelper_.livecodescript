@@ -527,15 +527,27 @@ command prepareTarget
    # CHECK IF THE uStylesLibPath OF THE TARGET IS SET
    # AND START USING STACK stylesLib
    if tTargetLoaded then
-      put the uStylesLibPath of stack tTarget into tStylesLibOfTarget
-      if there is a file tStylesLibOfTarget then
-         if tStylesLibFile is not "inUse" then
-            start using stack tStylesLibOfTarget
-            put "inUse" into tStylesLibFile
-         end if
+      if the uStylesLibPath of stack tTarget <> empty then
          
-         put tStylesLibOfTarget into tStylesLibPath
-      end if -- if there is a file tStylesLibOfTarget
+         put the uStylesLibPath of stack tTarget into tStylesLibOfTarget
+         if there is a file tStylesLibOfTarget then
+            if tStylesLibFile is not "inUse" then
+               start using stack tStylesLibOfTarget
+               put "inUse" into tStylesLibFile
+            end if
+            
+            put tStylesLibOfTarget into tStylesLibPath
+         end if -- if there is a file tStylesLibOfTarget
+         
+      else -- if the uStylesLibPath of stack tTarget <> empty
+         # THIS IS A NEW STACK, CLOSE stylesLib
+         if tStylesLibFile is "inUse" then
+            stop using stack "stylesLib"
+            delete stack "stylesLib"
+            put empty into tStylesLibFile
+         end if  -- if tStylesLibFile is "inUse"
+         
+      end if -- if the uStylesLibPath of stack tTarget <> empty
    end if -- if tTargetLoaded
    
    # CHECK IF stylesLib IS IN USE IN CASE THE TARGET STACK IS LOADED
