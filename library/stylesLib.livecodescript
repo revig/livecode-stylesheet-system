@@ -15,7 +15,7 @@ script "stylesLib"
 --
 -- copyright 2021 revIgniter.com
 --
--- Version 1.0.1
+-- Version 1.0.3
 --
 -- License: Apache License, Version 2.0, see http://www.apache.org/licenses/LICENSE-2.0
 --
@@ -124,9 +124,9 @@ end syLoadStyles
 --| COMMAND syApplyStyles
 --|
 --| Author: rabit
---| Version:  1.1
+--| Version:  1.2
 --| Created: 2021-03-19
---| Last Mod: 2021-05-19
+--| Last Mod: 2021-05-27
 --| Requires: syResizeElement
 --|
 --| Summary: Loop through the list of selectors of a control and apply the appropriate property values.
@@ -180,20 +180,23 @@ command syApplyStyles pControlID
 						if tProp <> "align" then
 
               # CHECK IF THE PROPERTY NAME IS VALID
-              put the properties of control id pControlID into tControlPropsA
-              if tProp is not among the lines of the keys of tControlPropsA then
-                put "foregroundColor,firstcolor,textcolor,thumbcolor,fillfore,penfore,forecolor,backgroundColor,secondcolor,backcolor" into tPropSynos
+              # EXCLUDE WIDGETS WHICH DO NOT HAVE A PROPERTIES PROPERTY
+              if word 1 of the name of control id pControlID <> "widget" then
+                put the properties of control id pControlID into tControlPropsA
+                if tProp is not among the lines of the keys of tControlPropsA then
+                  put "foregroundColor,firstcolor,textcolor,thumbcolor,fillfore,penfore,forecolor,backgroundColor,secondcolor,backcolor,width,height,loc,location,left,top,right,bottom,layer" into tPropSynos
 
-                if tProp is not among the items of tPropSynos then
-                  delete variable sStylesA[tSelector][tProp]
-                  answer warning "Invalid property name:" && quote & tProp & quote & "! Property name removed."
+                  if tProp is not among the items of tPropSynos then
+                    delete variable sStylesA[tSelector][tProp]
+                    answer warning "Invalid property name:" && quote & tProp & quote & "! Property name removed."
 
-                  # SET FLAG TO RESAVE JSON FILE
-                  put TRUE into sOverwriteStylesheet
+                    # SET FLAG TO RESAVE JSON FILE
+                    put TRUE into sOverwriteStylesheet
 
-                  next repeat
-                end if
-              end if -- if tProp is not among the lines of the keys of tControlPropsA
+                    next repeat
+                  end if
+                end if -- if tProp is not among the lines of the keys of tControlPropsA
+              end if -- if word 1 of the name of control id pControlID <> "widget"
 
 							put the tProp of control id pControlID into tCurrentPropVal
 
