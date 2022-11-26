@@ -10,6 +10,7 @@ Script "stack_stylesHelper_button_id_1042"
 
 on mouseMove
    local tTargetStack, tControlNum, tLongName, tControlSytleInfoA, tName
+   local tStrOffset, tNameEnd
    
    if (the environment is "development") and (the shiftKey is down) then
       -- put the uStyleSelectors of the target

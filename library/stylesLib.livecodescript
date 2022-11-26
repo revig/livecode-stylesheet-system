@@ -92,7 +92,7 @@ local sStylesA, sOverwriteStylesheet
 ----------------------------------------------------------------------*/
 
 command syLoadStyles pStylesFilePath
-   local tStylesFilePath
+   local tStylesFilePath, tStylesData
 
 	 if pStylesFilePath is empty then
 		 answer file "Select stylesheet:"
@@ -274,7 +274,7 @@ end JSONToArray
 
 command syNewLook pStylesA
 	local tStackSelectors, tCardSelectors, tNumCtrls
-	local tCurrentPropVal, tControlID, tCurrentCdID
+	local tCurrentPropVal, tControlID, tCurrentCdID, tObject
    -- put the keys of sStylesA into msg ----------- selectors
    -- put the keys of sStylesA[".default"] into msg ------ properties
    -- put displayArrayData(sStylesA) into msg
