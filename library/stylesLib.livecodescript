@@ -15,7 +15,7 @@ script "stylesLib"
 --
 -- copyright 2021 revIgniter.com
 --
--- Version 1.0.3
+-- Version 1.0.4
 --
 -- License: Apache License, Version 2.0, see http://www.apache.org/licenses/LICENSE-2.0
 --
