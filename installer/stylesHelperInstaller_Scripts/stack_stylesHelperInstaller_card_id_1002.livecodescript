@@ -32,7 +32,7 @@ end storeStylesTreeViewLCE
 
 
 command storeStylesHelper
-   local tPlugin
+   local tPluginFile, tPluginFileDATA
    
    answer file "Locate the stylesHelper plugin:"
    put it into tPluginFile
@@ -50,7 +50,7 @@ end storeStylesHelper
 
 
 command installStylesTreeViewWidget
-   local tWidgetData, tWidgetName
+   local tWidgetData, tWidgetName, tTempWidgetPath
    
    set cursor to watch
    

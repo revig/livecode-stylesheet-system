@@ -95,7 +95,7 @@ end getStyleSheet
 
 # INITIALIZATION, LOAD A STYLESHEET OR CREATE ONE IF THERE IS NONE
 command initStyles pStylesFile pEnforceLoad pPrepareTarget
-   local tStylesFile, tSuccess
+   local tStylesFile, tSuccess, tStylesDir
    
    # HIDE SELECTORS LIST OF SELECTED CONTROL
    dispatch "controlSelectorsListAnim" to cd "styleSheetCd" with false
@@ -293,6 +293,8 @@ end hideBubble
    
    # GET THE VALUE OF THE CLICKED KEY
 private function _clickedValue pPathToNode
+   local tSuccess
+
    put pPathToNode into sClickedNodeKeys
    
    split pPathToNode by comma
@@ -316,6 +318,8 @@ end _clickedValue
    # MODIFICATIONS TO THE TARGET STACK
 command returnInBubble
    local tBubbleText, tTarget, tPathToNode, tStylesJSON
+   local tParentNodeLine, tClosingOffset, tClosingLine
+   local tCurrentClassData, tNewClassData
    
    hide the owner of the target
    put the text of the target into tBubbleText
@@ -386,6 +390,8 @@ end returnInBubble
    
    
 command applyStyles pTarget pCompareChecksum
+   local tStylesFile
+   
    if pTarget is empty then
       put the label of btn "targetBtn" into pTarget
    end if

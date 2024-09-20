@@ -359,7 +359,7 @@ end returnInSelectorBubble
 
 
 command storeScript pWhich
-   local tPlugin
+   local tPlugin, tScriptFile, tScriptFileDATA
    
    switch pWhich
       case "stylesLib"
